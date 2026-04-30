@@ -66,6 +66,17 @@ session list is just a sequence — feel free to lengthen, shorten, or rearrange
 The `command` field on each session runs when that session ends, which is how the
 notifications work. Replace it with anything you like (sound, script, etc.).
 
+## Customizing notification messages
+
+End-of-session notifications are picked at random from three pools defined in
+`~/.local/bin/uair-notify`: `work_done`, `break_done`, and `cycle_done`. Add or
+edit messages directly in that script. The pools are plain bash arrays — no
+syntax to learn.
+
+Note: re-running `install.sh` will overwrite your edits to `uair-notify`. If you
+plan to customize, either skip reinstalling or copy the script somewhere safe
+first.
+
 ## Uninstall
 
 ```sh

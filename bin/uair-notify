@@ -1,0 +1,65 @@
+#!/bin/bash
+# Picks a random encouraging message for the given pomodoro phase end and
+# fires it via notify-send. Called from the `command` field of each session
+# in ~/.config/uair/uair.toml.
+#
+# Usage: uair-notify {work|break|cycle}
+
+set -euo pipefail
+
+work_done=(
+  "Nice work! Time to recharge."
+  "Solid focus session — take a breather."
+  "Done! Stand up, stretch, hydrate."
+  "Great job. Step away for a few."
+  "Crushed it. Break time."
+  "That's one in the bank. Rest up."
+  "Focus complete — go reset."
+  "Well done. Look at something far away."
+  "Session done — you earned this break."
+  "Brain power saved. Take five."
+)
+
+break_done=(
+  "Back to it — let's go."
+  "Break's up. Ready when you are."
+  "Refreshed? Time to focus."
+  "Let's pick it back up."
+  "Back in the chair — one more block."
+  "Tag in — next session starts now."
+  "Recharged. Let's make it count."
+  "You've got this. Round's starting."
+  "Break over — focus mode."
+  "Time to ship something."
+)
+
+cycle_done=(
+  "Cycle complete! SUPER+ALT+R to start over."
+  "Four sessions done. Solid work — SUPER+ALT+R to go again."
+  "Full cycle in the books. SUPER+ALT+R for another round."
+  "That's a wrap on the cycle. SUPER+ALT+R when you're ready."
+)
+
+phase="${1:-}"
+
+case "$phase" in
+  work)
+    arr=("${work_done[@]}")
+    urgency="critical"
+    ;;
+  break)
+    arr=("${break_done[@]}")
+    urgency="normal"
+    ;;
+  cycle)
+    arr=("${cycle_done[@]}")
+    urgency="normal"
+    ;;
+  *)
+    echo "Usage: $0 {work|break|cycle}" >&2
+    exit 1
+    ;;
+esac
+
+msg="${arr[RANDOM % ${#arr[@]}]}"
+notify-send -u "$urgency" "Pomodoro" "$msg"
