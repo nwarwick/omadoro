@@ -1,0 +1,6 @@
+/* Append to ~/.config/waybar/style.css */
+
+#custom-pomodoro {
+  margin: 0 7.5px;
+  font-size: 11px;
+}

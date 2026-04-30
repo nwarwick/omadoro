@@ -1,0 +1,12 @@
+#!/bin/bash
+# Waybar status emitter for uair pomodoro.
+# Emits empty text when daemon is not running so waybar hides the module.
+
+while true; do
+  if out=$(uairctl fetch '{name} {time}' 2>/dev/null) && [ -n "$out" ]; then
+    printf '{"text":" %s","tooltip":"SUPER+ALT+P start/stop  ·  N next  ·  B prev  ·  R restart"}\n' "$out"
+  else
+    printf '{"text":""}\n'
+  fi
+  sleep 1
+done

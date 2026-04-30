@@ -1,0 +1,12 @@
+// Add "custom/pomodoro" to one of your modules arrays (modules-left/center/right),
+// then paste the block below into the top-level object of ~/.config/waybar/config.jsonc.
+
+"custom/pomodoro": {
+  "exec": "$HOME/.local/bin/uair-status",
+  "return-type": "json",
+  "format": "{}",
+  "on-click": "$HOME/.local/bin/uair-toggle",
+  "on-click-right": "uairctl jump work-1",
+  "on-scroll-up": "uairctl next",
+  "on-scroll-down": "uairctl prev"
+}

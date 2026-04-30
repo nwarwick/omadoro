@@ -1,0 +1,50 @@
+[defaults]
+format = " {name} {time}\n"
+
+[[sessions]]
+id = "work-1"
+name = "Work"
+duration = "25m"
+command = "notify-send -u critical 'Pomodoro' 'Work session done — short break.'"
+
+[[sessions]]
+id = "break-1"
+name = "Break"
+duration = "5m"
+command = "notify-send 'Pomodoro' 'Break over — back to work.'"
+
+[[sessions]]
+id = "work-2"
+name = "Work"
+duration = "25m"
+command = "notify-send -u critical 'Pomodoro' 'Work session done — short break.'"
+
+[[sessions]]
+id = "break-2"
+name = "Break"
+duration = "5m"
+command = "notify-send 'Pomodoro' 'Break over — back to work.'"
+
+[[sessions]]
+id = "work-3"
+name = "Work"
+duration = "25m"
+command = "notify-send -u critical 'Pomodoro' 'Work session done — short break.'"
+
+[[sessions]]
+id = "break-3"
+name = "Break"
+duration = "5m"
+command = "notify-send 'Pomodoro' 'Break over — back to work.'"
+
+[[sessions]]
+id = "work-4"
+name = "Work"
+duration = "25m"
+command = "notify-send -u critical 'Pomodoro' 'Work session done — long break.'"
+
+[[sessions]]
+id = "long-break"
+name = "Long Break"
+duration = "15m"
+command = "notify-send 'Pomodoro' 'Cycle complete — jump back to work-1 to start over.'"

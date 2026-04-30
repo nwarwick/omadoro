@@ -1,0 +1,10 @@
+#!/bin/bash
+# Toggle the pomodoro: start daemon if not running, otherwise stop it.
+
+if pgrep -x uair >/dev/null 2>&1; then
+  pkill -x uair
+else
+  setsid -f uair >/dev/null 2>&1
+  sleep 0.2
+  uairctl resume 2>/dev/null
+fi
