@@ -4,6 +4,8 @@ A pomodoro timer for [Omarchy](https://omarchy.org) / Hyprland setups, built on
 [`uair`](https://github.com/metent/uair) with a Waybar status module and Hyprland
 keybindings.
 
+![omadoro running in the Waybar top bar, showing "Work 12m 22s"](docs/preview.png)
+
 - One key to start, one key to stop (`SUPER+ALT+P`)
 - Waybar module that hides itself when the timer isn't running
 - Cycle of 4× 25-minute work sessions with 5-minute breaks, then a 15-minute long break
