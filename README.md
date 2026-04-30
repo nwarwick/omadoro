@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/logo.png" alt="omadoro" width="800"/>
+</p>
+
 # omadoro
 
 A pomodoro timer for [Omarchy](https://omarchy.org) / Hyprland setups, built on

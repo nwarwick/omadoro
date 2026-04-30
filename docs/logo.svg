@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-label="omadoro — pomodoro for omarchy">
+  <!-- Outer Tokyo Night background -->
+  <rect width="1200" height="400" fill="#1a1b26"/>
+
+  <!-- Terminal window panel -->
+  <rect x="20" y="20" width="1160" height="360" rx="14" ry="14" fill="#16161e" stroke="#414868" stroke-width="1"/>
+
+  <!-- Title bar separator -->
+  <line x1="20" y1="92" x2="1180" y2="92" stroke="#2a2b3d" stroke-width="1"/>
+
+  <!-- Traffic light dots -->
+  <circle cx="56" cy="56" r="8" fill="#f7768e"/>
+  <circle cx="84" cy="56" r="8" fill="#e0af68"/>
+  <circle cx="112" cy="56" r="8" fill="#9ece6a"/>
+
+  <!-- Title bar text -->
+  <text x="600" y="62" font-family="'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace" font-size="16" fill="#565f89" text-anchor="middle">omadoro — pomodoro for omarchy</text>
+
+  <!-- Prompt line: ❯ omadoro -->
+  <text x="80" y="230" font-family="'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace" font-size="92" font-weight="700">
+    <tspan fill="#9ece6a">❯ </tspan><tspan fill="#c0caf5">omadoro</tspan>
+  </text>
+
+  <!-- Mock waybar output line -->
+  <text x="80" y="330" font-family="'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace" font-size="56" font-weight="500" fill="#7aa2f7">
+     Work 25m 00s
+  </text>
+
+  <!-- Blinking cursor block (static for image) -->
+  <rect x="1080" y="248" width="36" height="84" fill="#c0caf5" opacity="0.45"/>
+</svg>
