@@ -41,7 +41,8 @@ mkdir -p "$BIN_DIR"
 install -m 755 "${REPO_DIR}/bin/uair-toggle" "${BIN_DIR}/uair-toggle"
 install -m 755 "${REPO_DIR}/bin/uair-status" "${BIN_DIR}/uair-status"
 install -m 755 "${REPO_DIR}/bin/uair-notify" "${BIN_DIR}/uair-notify"
-ok "uair-toggle, uair-status, and uair-notify installed"
+install -m 755 "${REPO_DIR}/bin/uair-jump" "${BIN_DIR}/uair-jump"
+ok "uair-toggle, uair-status, uair-notify, and uair-jump installed"
 echo
 
 bold "Installing uair config"

@@ -6,7 +6,7 @@
   "return-type": "json",
   "format": "{}",
   "on-click": "$HOME/.local/bin/uair-toggle",
-  "on-click-right": "uairctl jump work-1",
-  "on-scroll-up": "uairctl next",
-  "on-scroll-down": "uairctl prev"
+  "on-click-right": "$HOME/.local/bin/uair-jump restart",
+  "on-scroll-up": "$HOME/.local/bin/uair-jump next",
+  "on-scroll-down": "$HOME/.local/bin/uair-jump prev"
 }

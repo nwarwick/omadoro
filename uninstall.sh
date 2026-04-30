@@ -18,6 +18,7 @@ bold "Removing scripts"
 rm -f "${HOME}/.local/bin/uair-toggle"
 rm -f "${HOME}/.local/bin/uair-status"
 rm -f "${HOME}/.local/bin/uair-notify"
+rm -f "${HOME}/.local/bin/uair-jump"
 ok "Scripts removed"
 echo
 

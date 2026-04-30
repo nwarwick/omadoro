@@ -1,0 +1,15 @@
+#!/bin/bash
+# Jump to a different pomodoro session and immediately resume the timer.
+# uairctl's navigation commands (next/prev/jump) leave the new session
+# paused, so we follow up with `resume` to start it ticking.
+#
+# Usage: uair-jump {next|prev|restart}
+
+case "${1:-}" in
+  next)    uairctl next ;;
+  prev)    uairctl prev ;;
+  restart) uairctl jump work-1 ;;
+  *)       echo "Usage: $0 {next|prev|restart}" >&2; exit 1 ;;
+esac
+
+uairctl resume 2>/dev/null
