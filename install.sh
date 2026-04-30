@@ -1,5 +1,5 @@
 #!/bin/bash
-# Installer for omarchy-pomodoro.
+# Installer for omadoro.
 # Copies scripts, the uair config, and the Hyprland keybinding snippet into place.
 # Prints the waybar pieces for manual paste — JSONC and CSS can't be merged safely
 # without risking the user's existing config.

@@ -1,4 +1,4 @@
-# omarchy-pomodoro
+# omadoro
 
 A pomodoro timer for [Omarchy](https://omarchy.org) / Hyprland setups, built on
 [`uair`](https://github.com/metent/uair) with a Waybar status module and Hyprland
@@ -25,8 +25,8 @@ pacman -S uair waybar libnotify
 ## Install
 
 ```sh
-git clone https://github.com/<your-username>/omarchy-pomodoro.git
-cd omarchy-pomodoro
+git clone https://github.com/<your-username>/omadoro.git
+cd omadoro
 ./install.sh
 ```
 

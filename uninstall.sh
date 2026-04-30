@@ -1,5 +1,5 @@
 #!/bin/bash
-# Uninstaller for omarchy-pomodoro.
+# Uninstaller for omadoro.
 # Removes scripts and the Hyprland snippet. Leaves uair.toml and waybar edits alone
 # — those may contain user customizations and should be cleaned up by hand.
 
