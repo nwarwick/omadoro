@@ -46,14 +46,17 @@ case "$phase" in
   work)
     arr=("${work_done[@]}")
     urgency="critical"
+    next_action="Start break"
     ;;
   break)
     arr=("${break_done[@]}")
     urgency="normal"
+    next_action="Start focus"
     ;;
   cycle)
     arr=("${cycle_done[@]}")
     urgency="normal"
+    next_action=""
     ;;
   *)
     echo "Usage: $0 {work|break|cycle}" >&2
@@ -62,4 +65,16 @@ case "$phase" in
 esac
 
 msg="${arr[RANDOM % ${#arr[@]}]}"
-notify-send -u "$urgency" "Pomodoro" "$msg"
+
+# For work/break ends, pause the auto-advanced next session and require the
+# user to acknowledge the notification before it resumes. This prevents the
+# next phase from quietly running while the user is still heads-down.
+if [[ -n "$next_action" ]]; then
+  uairctl pause 2>/dev/null || true
+  notify-send -u "$urgency" -t 0 \
+    --action="default=$next_action" \
+    "Pomodoro" "$msg" >/dev/null
+  uairctl resume 2>/dev/null || true
+else
+  notify-send -u "$urgency" -t 0 "Pomodoro" "$msg"
+fi
